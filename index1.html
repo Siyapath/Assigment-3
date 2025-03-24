@@ -2,28 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 – Vanilla JavaScript</title>
+  <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Quadratic Formula</h1>
-        <form id="quad-form">
-            <label for="a">a value:</label>
-            <input type="number" id="a" name="a" required />
-            <label for="b">b value:</label>
-            <input type="number" id="b" name="b" required />
-            <label for="c">c value:</label>
-            <input type="number" id="c" name="c" required />
-            <label for="result">Result:</label>
-            <input type="text" id="result" name="result" />
-            <input type="submit" value="Calculate" />
+  <div class="container">
+    <h1>Assignment 3 – Vanilla JavaScript</h1>
+    
+    <div class="form-container">
+      <div class="form-section" id="heron-formula">
+        <h2>Heron’s Formula</h2>
+        <form id="heron-form">
+          <label for="a">Side A:</label>
+          <input type="number" id="a" name="a" required />
+          <label for="b">Side B:</label>
+          <input type="number" id="b" name="b" required />
+          <label for="c">Side C:</label>
+          <input type="number" id="c" name="c" required />
+          <label for="result">Result:</label>
+          <input type="text" id="heron-result" name="result" disabled />
+          <input type="submit" value="Calculate" />
         </form>
+      </div>
+
+      <div class="form-section" id="ambiguous-case">
+        <h2>Ambiguous Case</h2>
+        <form id="ambiguous-form">
+          <label for="angleA">Angle A (in degrees):</label>
+          <input type="number" id="angleA" name="angleA" required />
+          <label for="sideA">Side A:</label>
+          <input type="number" id="sideA" name="sideA" required />
+          <label for="sideB">Side B:</label>
+          <input type="number" id="sideB" name="sideB" required />
+          <label for="result">Result:</label>
+          <input type="text" id="ambiguous-result" name="result" disabled />
+          <input type="submit" value="Calculate" />
+        </form>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="form-container">
+      <div class="form-section" id="newtons-method">
+        <h2>Newton’s Method</h2>
+        <form id="newton-form">
+          <label for="guess">Root Guess:</label>
+          <input type="number" id="guess" name="guess" required />
+          <label for="result">Result:</label>
+          <input type="text" id="newton-result" name="result" disabled />
+          <input type="submit" value="Calculate" />
+        </form>
+      </div>
+
+      <div class="form-section" id="polynomial-function">
+        <h2>Polynomial Function</h2>
+        <form id="poly-form">
+          <label for="coefficients">Coefficients (space-separated):</label>
+          <input type="text" id="coefficients" name="coefficients" required />
+          <label for="exponents">Exponents (space-separated):</label>
+          <input type="text" id="exponents" name="exponents" required />
+          <label for="x-value">X value:</label>
+          <input type="number" id="x-value" name="x-value" required />
+          <label for="result">Result:</label>
+          <input type="text" id="poly-result" name="result" disabled />
+          <input type="submit" value="Calculate" />
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
+                                                                                                                

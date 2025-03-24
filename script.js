@@ -16,3 +16,19 @@ document.getElementById("quad-form").addEventListener('submit', (event) => {
         document.getElementById("result").value = `x=${rootOne}`;
     }
 })
+
+
+function heronsFormula(a, b, c) {
+    const s = (a + b + c) / 2;  
+    const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    return area;
+  }
+  
+  document.getElementById('heron-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const a = parseFloat(document.getElementById('a').value);
+    const b = parseFloat(document.getElementById('b').value);
+    const c = parseFloat(document.getElementById('c').value);
+    const area = heronsFormula(a, b, c);
+    document.getElementById('heron-result').value = `Area: ${area.toFixed(2)} square units`;
+  });
